@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<!--First define the css properties-->
+<style>
+      html, body {
+        height: 100%;
+        margin: 0%;
+        padding: 0;
+        <!--background: #ccc;--> 
+      }
+      
+	  img.one {
+	  width: 45%;
+	  }
+	  
+	  img.two {
+	  width: 45%;
+	  }
+	  
+	  vid.one 
+	  width: 90%;
+	  }
+	  
+      #map {
+        float: left;
+        height: 90%;
+        width: 100%;
+        margin-bottom: 0%;
+      }
+      
+      .nav ul {
+        list-style: none;
+        background-color: #444;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .nav li {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2em;
+        line-height: 30px;
+        height: 30px;
+        border-bottom: 1px solid #888;
+        }
+      
+      .nav a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        transition: .3s background-color;
+        }
+      
+      .nav a:hover {
+        background-color: #005f5f;
+        }
+      
+      .nav a.active {
+        background-color: #fff;
+        color: #444;
+        cursor: default;
+      }
+      
+      @media screen and (min-width: 600px) {
+        .nav li {
+          /*width: 250px;*/
+          border-bottom: none;
+          height: 0px;
+          line-height: 20px;
+          font-size: 1.4em;
+          padding-top: 30px;
+          padding-right: 30px;
+          padding-bottom: 50px;
+          padding-left: 80px;
+          }
+        
+        /*Option 1 - Display Inline*/
+        .nav li {
+          display: inline-flex;
+          margin-right: -4px;
+          }
+  
+    </style>
+
+<!--Now define the html content-->
+<body class="news">
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="Home"><a href="index.html">Home</a></li>
+        <li class="News"><a href="news.html">News</a></li>
+        <li class="Case Studies"><a href="caseStudies.html">Case Studies</a></li>
+        <li class="Real-time Monitoring"><a href="locationMap.html">Real-time Monitoring</a></li>
+        <li class="Contact"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+</body>
+</html>
+
+<body>
+<img class="one" src="grizedaleLevelLastWeek.png" alt="Recent river flow">
+<img class="two" src="grizedaleLevelAll.png" alt="River flow since install">
+</body>
+
+
+<body>
+  <video id="my-video" class="vid.one" controls preload="auto">
+  poster="grizedale_ph20_recentImage.jpg" data-setup="{}">
+    <source src="grizedale_ph20_recentVideo.mp4" type='video/mp4'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+  <script src="http://vjs.zencdn.net/6.2.0/video.js"></script>
+</body>
+
+

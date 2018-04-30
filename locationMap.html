@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>KML feature details</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0%;
+        padding: 0;
+        background: #ccc;
+      }
+      
+      #map {
+        float: left;
+        height: 90%;
+        width: 100%;
+        margin-bottom: 0%;
+      }
+      
+      .nav ul {
+        list-style: none;
+        background-color: #444;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .nav li {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2em;
+        line-height: 30px;
+        height: 30px;
+        border-bottom: 1px solid #888;
+        }
+      
+      .nav a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        transition: .3s background-color;
+        }
+      
+      .nav a:hover {
+        background-color: #005f5f;
+        }
+      
+      .nav a.active {
+        background-color: #fff;
+        color: #444;
+        cursor: default;
+      }
+      
+      @media screen and (min-width: 600px) {
+        .nav li {
+          /*width: 250px;*/
+          border-bottom: none;
+          height: 0px;
+          line-height: 20px;
+          font-size: 1.4em;
+          padding-top: 30px;
+          padding-right: 30px;
+          padding-bottom: 50px;
+          padding-left: 80px;
+          }
+        
+        /*Option 1 - Display Inline*/
+        .nav li {
+          display: inline-flex;
+          margin-right: -4px;
+          }
+  
+    </style>
+  </head>
+  
+  <!--Now define the html content-->
+<body class="news">
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="Home"><a href="index.html">Home</a></li>
+        <li class="News"><a href="news.html">News</a></li>
+        <li class="Case Studies"><a href="caseStudies.html">Case Studies</a></li>
+        <li class="Real-time Monitoring"><a href="locationMap.html">Real-time Monitoring</a></li>
+        <li class="Contact"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+</body>
+  
+  
+  <body>
+    <div id="map"></div>
+    
+    <script>
+     
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: {lat: 16.14221, lng: -22.861354}
+        });
+
+        var darnhall = new google.maps.Marker({
+          position: {lat: 55.721133, lng: -3.208000},
+          map: map,
+          title: 'Darnhall Mains',
+          url: 'https://catchmentsci.github.io/Newcastle-Flood-Observatory/darnhall.html'
+          });
+        
+        google.maps.event.addListener(darnhall, 'click', function() {
+          window.open(this.url)
+          });
+        
+        var grizedale = new google.maps.Marker({
+          position: {lat: 54.537342, lng: -2.941792},
+          map: map,
+          title: 'Grizedale Beck',
+          url: 'https://catchmentsci.github.io/Newcastle-Flood-Observatory/grizedale_policehouse.html'
+          });
+        
+        google.maps.event.addListener(grizedale, 'click', function() {
+          window.open(this.url)
+          })
+        
+         var calbuco = new google.maps.Marker({
+          position: {lat: -41.330341, lng: -72.608496},
+          map: map,
+          title: 'Calbuco',
+          url: 'https://catchmentsci.github.io/Newcastle-Flood-Observatory/calbuco.html'
+          });
+        
+        google.maps.event.addListener(calbuco, 'click', function() {
+          window.open(this.url)
+          });           
+        
+        var vsl = new google.maps.Marker({
+          position: {lat: -43.390485, lng: -72.373650},
+          map: map,
+          title: 'Villa Santa Lucia',
+          url: 'https://catchmentsci.github.io/Newcastle-Flood-Observatory/vsl.html'
+          });
+        
+        google.maps.event.addListener(vsl, 'click', function() {
+          window.open(this.url)
+          });    
+        
+        var simpson_kayak = new google.maps.Marker({
+          position: {lat: -45.586492, lng: -72.083127},
+          map: map,
+          title: 'Rio Simpson',
+          url: 'https://catchmentsci.github.io/Newcastle-Flood-Observatory/simpson1.html'
+          });
+        
+        google.maps.event.addListener(simpson_kayak, 'click', function() {
+          window.open(this.url)
+          });    
+        
+        var devon_dart = new google.maps.Marker({
+          position: {lat: 50.479391, lng: -3.762149},
+          map: map,
+          title: 'River Dart',
+          url: 'https://catchmentsci.github.io/Newcastle-Flood-Observatory/devon_dart.html'
+          });
+                
+        google.maps.event.addListener(devon_dart, 'click', function() {
+          window.open(this.url)
+          });
+        
+;   
+
+      }
+      
+    </script>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqr6TuqIP4EV4lUUGiJVVxbLEcrI3d_Ss&callback=initMap">
+    </script>
+  
+  </body>
+  
+</html>
